@@ -15,15 +15,14 @@
     //
     function onDeviceReady() {
 		var element = document.getElementById('deviceIsReady');
-		element.innerHTML = 'Watching shake movement...' +
-							'<p><button type="button" onclick="clearShakeData();">Click Me!</button></p>";
+		element.innerHTML = 'Watching shake movement...';
 		
 		shake.startWatch(onDetected);
     }
 	
 	function onDetected() {
 		var element = document.getElementById('shakeData');
-		element.innerHTML = "It's happening!";
+		element.innerHTML = 'It\'s happening! <p><button type="button" onclick="clearShakeData();">Clear</button></p>'
 	}
 	
 	function clearShakeData(){
