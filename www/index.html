@@ -15,7 +15,8 @@
     //
     function onDeviceReady() {
 		var element = document.getElementById('deviceIsReady');
-		element.innerHTML = "Watching shake movement...";
+		element.innerHTML = 'Watching shake movement...' +
+							'<p><button type="button" onclick="clearShakeData();">Click Me!</button></p>";
 		
 		shake.startWatch(onDetected);
     }
@@ -24,11 +25,16 @@
 		var element = document.getElementById('shakeData');
 		element.innerHTML = "It's happening!";
 	}
+	
+	function clearShakeData(){
+		document.getElementById('shakeData').innerHTML = '';
+	}
 
     </script>
   </head>
   <body>
 	<div id="deviceIsReady">Loading...</div>
-    <p id="shakeData"></p>
+    <p id="shakeData">
+	</p>
   </body>
 </html>
